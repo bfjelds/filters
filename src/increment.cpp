@@ -28,10 +28,10 @@
  */
 
 #include "filters/increment.h"
-#include "pluginlib/class_list_macros.h"
+#include <class_loader/class_loader.h>
 
 
 
-PLUGINLIB_EXPORT_CLASS(filters::IncrementFilter<int>, filters::FilterBase<int>)
-PLUGINLIB_EXPORT_CLASS(filters::MultiChannelIncrementFilter<int>, filters::MultiChannelFilterBase<int>)
+CLASS_LOADER_REGISTER_CLASS(filters::IncrementFilter<int>, filters::FilterBase<int>)
+CLASS_LOADER_REGISTER_CLASS(filters::MultiChannelIncrementFilter<int>, filters::MultiChannelFilterBase<int>)
 

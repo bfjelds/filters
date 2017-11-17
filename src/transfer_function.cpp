@@ -28,8 +28,8 @@
  */
 
 #include "filters/transfer_function.h"
-#include "pluginlib/class_list_macros.h"
+#include <class_loader/class_loader.h>
 
-PLUGINLIB_EXPORT_CLASS(filters::SingleChannelTransferFunctionFilter<double>, filters::FilterBase<double>)
-PLUGINLIB_EXPORT_CLASS(filters::MultiChannelTransferFunctionFilter<double>, filters::MultiChannelFilterBase<double>)
+CLASS_LOADER_REGISTER_CLASS(filters::SingleChannelTransferFunctionFilter<double>, filters::FilterBase<double>)
+CLASS_LOADER_REGISTER_CLASS(filters::MultiChannelTransferFunctionFilter<double>, filters::MultiChannelFilterBase<double>)
 

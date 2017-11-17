@@ -29,12 +29,12 @@
 
 
 #include "filters/param_test.h"
-#include "pluginlib/class_list_macros.h"
+#include <class_loader/class_loader.h>
 
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<double>, filters::FilterBase<double>)
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<int>, filters::FilterBase<int>)
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<unsigned int>, filters::FilterBase<unsigned int>)
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<std::string>, filters::FilterBase<std::string>)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<double>, filters::FilterBase<double>)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<int>, filters::FilterBase<int>)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<unsigned int>, filters::FilterBase<unsigned int>)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<std::string>, filters::FilterBase<std::string>)
 
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<std::vector<double> >, filters::FilterBase<std::vector<double> >)
-PLUGINLIB_EXPORT_CLASS(filters::ParamTest<std::vector<std::string> >, filters::FilterBase<std::vector<std::string> >)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<std::vector<double> >, filters::FilterBase<std::vector<double> >)
+CLASS_LOADER_REGISTER_CLASS(filters::ParamTest<std::vector<std::string> >, filters::FilterBase<std::vector<std::string> >)

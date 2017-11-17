@@ -35,7 +35,7 @@
 #include <pluginlib/class_loader.h>
 #include <sstream>
 #include <vector>
-#include "boost/shared_ptr.hpp"
+#include <boost/shared_ptr.hpp>
 
 namespace filters
 {

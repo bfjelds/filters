@@ -34,7 +34,7 @@
 #include <cstring>
 #include <stdio.h>
 
-#include <boost/scoped_ptr.hpp>
+#include "boost/scoped_ptr.hpp"
 
 #include "filters/filter_base.h"
 
