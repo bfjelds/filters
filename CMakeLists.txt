@@ -6,17 +6,21 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(rcutils REQUIRED)
+find_package(class_loader REQUIRED)
 
 include_directories(
     include
     ${rclcpp_INCLUDE_DIRS}
     ${rcutils_INCLUDE_DIRS}
+    ${class_loader_INCLUDE_DIRS}
     $ENV{BOOST_ROOT}
 )
 
 ##############################################################################
 # Build
 ##############################################################################
+
+add_definitions(-DROS2)
 
 # Plugins
 add_library(mean src/mean.cpp)
@@ -31,6 +35,16 @@ add_library(transfer_function src/transfer_function.cpp)
 target_link_libraries(transfer_function ${rclcpp_LIBRARIES} ${rcutils_LIBRARIES})
 
 
+ament_export_include_directories(include)
+ament_export_libraries(
+  mean 
+  params 
+  increment
+  median
+  transfer_function
+)
+ament_package()
+
 ##############################################################################
 # Install
 ##############################################################################
@@ -44,7 +58,7 @@ install(TARGETS mean params increment median transfer_function
 
 # Install headers
 install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION include)
+  DESTINATION include/${PROJECT_NAME}/)
 
 # Install plugins xml file
 install(FILES default_plugins.xml
