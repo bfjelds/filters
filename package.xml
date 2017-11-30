@@ -12,6 +12,7 @@
   <depend>class_loader</depend>
   <depend>rclcpp</depend>
   <depend>rcutils</depend>
+  <depend>xmlrpcpp</depend>
 
   <exec_depend>ament_cmake</exec_depend>
 
