@@ -10,6 +10,7 @@
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>class_loader</depend>
+  <depend>pluginlib</depend>
   <depend>rclcpp</depend>
   <depend>rcutils</depend>
   <depend>xmlrpcpp</depend>

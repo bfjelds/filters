@@ -6,7 +6,7 @@ find_package(ament_cmake REQUIRED)
 
 find_package(rclcpp REQUIRED)
 find_package(rcutils REQUIRED)
-find_package(class_loader REQUIRED)
+find_package(pluginlib REQUIRED)
 find_package(xmlrpcpp REQUIRED)
 
 include_directories(
@@ -14,6 +14,7 @@ include_directories(
     ${rclcpp_INCLUDE_DIRS}
     ${rcutils_INCLUDE_DIRS}
     ${class_loader_INCLUDE_DIRS}
+    ${pluginlib_INCLUDE_DIRS}
     ${xmlrpcpp_INCLUDE_DIRS}
     $ENV{BOOST_ROOT}
 )
