@@ -38,6 +38,7 @@ add_library(transfer_function src/transfer_function.cpp)
 target_link_libraries(transfer_function ${rclcpp_LIBRARIES} ${rcutils_LIBRARIES})
 
 
+pluginlib_export_plugin_description_file(filters default_plugins.xml)
 ament_export_include_directories(include)
 ament_export_libraries(
   mean 
@@ -64,6 +65,6 @@ install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}/)
 
 # Install plugins xml file
-install(FILES default_plugins.xml
-  DESTINATION share
-)
+#install(FILES default_plugins.xml
+#  DESTINATION share
+#)

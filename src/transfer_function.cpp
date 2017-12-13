@@ -28,8 +28,8 @@
  */
 
 #include "filters/transfer_function.h"
-#include <class_loader/class_loader.h>
+#include <pluginlib/class_list_macros.hpp>  // NOLINT
 
-CLASS_LOADER_REGISTER_CLASS(filters::SingleChannelTransferFunctionFilter<double>, filters::FilterBase<double>)
-CLASS_LOADER_REGISTER_CLASS(filters::MultiChannelTransferFunctionFilter<double>, filters::MultiChannelFilterBase<double>)
+PLUGINLIB_EXPORT_CLASS(filters::SingleChannelTransferFunctionFilter<double>, filters::FilterBase<double>)
+PLUGINLIB_EXPORT_CLASS(filters::MultiChannelTransferFunctionFilter<double>, filters::MultiChannelFilterBase<double>)
 
