@@ -39,7 +39,7 @@
 #define ROS_DEBUG(...)
 
 #endif
-#include <pluginlib/class_loader.h>
+#include <pluginlib/class_loader.hpp>
 #define USE_PLUGINLIB_CLASSLOADER
 
 #include "filters/filter_base.h"
